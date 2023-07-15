@@ -61,6 +61,9 @@ const Header = () => {
               </button>
               <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <div className="navbar-nav">
+                <a className="nav-link btn btn-light" onClick={() => handleNavClick('header')} href="#header">
+  Home
+</a>
 
 <a className="nav-link btn btn-light" onClick={() => handleNavClick('skills')} href="#skills">
   Skills
