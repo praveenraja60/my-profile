@@ -66,23 +66,15 @@
   color: #f8f9fa;
 }
 
+/* Mobile Styles */
 @media (max-width: 767px) {
-  .navbar-collapse {
-    justify-content: flex-end;
-  }
-
   .navbar-nav .nav-link {
-    margin-left: 0;
-    margin-bottom: 10px;
+    display: none;
   }
-
+  .navbar-nav .nav-link.show {
+    display: block;
+  }
   .navbar-toggler {
-    margin-top: 5px;
-  }
-
-  .navbar-toggler-icon {
-    width: 20px;
-    height: 20px;
+    margin-top: 10px;
   }
 }
-
