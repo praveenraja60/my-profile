@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 901px) {
+  .container {
+    font-size: 20px;
+  }
+}

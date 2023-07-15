@@ -1,0 +1,79 @@
+/* .profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+} */
+.profile-column {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto; /* Optional: To center the profile photo horizontally */
+}
+
+.profile-photo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.details-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.designation,
+.location {
+  font-size: 18px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+/* Typeweiter */
+/* .Typewriter__wrapper {
+    display: inline-block;
+    overflow: hidden;
+    animation: typewriter-animation 4s steps(22) infinite;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+  }
+  
+  @keyframes typewriter-animation {
+    0% {
+      width: 0;
+    }
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      width: 100%;
+      border-color: orange;
+    }
+  }
+   */
+
+.typing {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
