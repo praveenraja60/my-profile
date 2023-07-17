@@ -29,7 +29,7 @@ const Profile = () => {
             <h3 className="name">Praveen Rajkumar</h3>
             <span
               className="typing"
-              style={{ fontWeight: "bold", color: "red" }}
+              style={{ fontWeight: "bold", color: "blue" }}
             >
               <Typewriter
                 options={{

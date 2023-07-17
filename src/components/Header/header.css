@@ -47,7 +47,7 @@
 }
 
 .nav-link:hover {
-  color: red;
+  color:blue;
 }
 
 .btn {
@@ -57,12 +57,12 @@
   border-radius: 20px;
   background-color: #f8f9fa;
   border: 1px solid #d0d5db;
-  color: red;
+  color: blue;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
-  background-color: red;
+  background-color: blue;
   color: #f8f9fa;
 }
 
