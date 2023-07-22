@@ -33,7 +33,7 @@ const Profile = () => {
             >
               <Typewriter
                 options={{
-                  strings: ["FULL STACK DEVELOPER", "React JS & Nest JS"],
+                  strings: ["FRONTEND DEVELOPER", "React JS & Angular"],
                   autoStart: true,
                   loop: true,
                 }}
