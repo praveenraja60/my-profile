@@ -18,10 +18,6 @@
 
 import React, { useState } from 'react';
 import './header.css';
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Praveen1 from '../../assets/Praveen1 (1).jpg'
-import Praveen2 from '../../assets/Praveen2.jpg'
-import Praveen3 from '../../assets/Praveen3.jpg'
 import Profile from '../Profile/Profile';
 import Skills from '../Skills/Skills';
 import Experience from '../Experience/Experience';

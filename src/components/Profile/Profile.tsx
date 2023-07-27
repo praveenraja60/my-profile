@@ -1,6 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Praveen1 from "../../assets/Praveen1 (1).jpg";
-import Praveen2 from "../../assets/Praveen2.jpg";
+import {  Col, Container, Row } from "react-bootstrap";
 import Praveen3 from "../../assets/Praveen3.jpg";
 import gmail from "../../assets/gmail.jpg";
 import phone from "../../assets/mobile.jpg";
