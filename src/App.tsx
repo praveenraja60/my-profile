@@ -1,34 +1,36 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header/header';
+import React, { useContext } from "react";
+import "./App.css";
 
-import Experience from './components/Experience/Experience';
-import Education from './components/Education/Education';
-import Skills from './components/Skills/Skills';
-import Credentials from './components/Credentials/Credentials';
-import Awards from './components/Awards/Awards';
-import Profile from './components/Profile/Profile';
+import { themeContext } from "./Context";
+import Header from "./components/Header/header";
+import Homepage from "./components/homepage/Homepage";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
+import Footerr from "./footer/Footerr";
+import Experience from "./components/Experience/Experience";
 
-// import './App.css';
+function App(): JSX.Element {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
-
-
-const App = () => {
   return (
-    <div className="container">
-    <Router>
-    <Routes>
-      <Route path="/" element={<Header />} />
- 
-      <Route path="/experience" element={<Experience />} />
-      <Route path="/education" element={<Education />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route path="/credentials" element={<Credentials />} />
-      <Route path="/awards" element={<Awards />} />
-      <Route path="/profile" element={<Profile />} />
-    </Routes>
-  </Router>
-  </div>
+    <div
+      className="app"
+      style={{
+        background: darkMode ? "black" : "",
+        color: darkMode ? "white" : "",
+      }}
+    >
+      <Header />
+      <div className="sections">
+        <Homepage />
+        <Experience />
+        <Skills />
+        <Contact />
+        <Footerr />
+      </div>
+    </div>
   );
-};
+}
 
-export default App
+export default App;

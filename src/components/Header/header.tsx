@@ -1,99 +1,58 @@
-// import React from 'react';
-
-// const Header = () => {
-//   return (
-//     <header>
-//       <h1>Praveen Rajkumar</h1>
-//       <div>
-//         <li>Phone: 956-650-2092</li>
-//         <li>Email: praveenraja60@gmail.com</li>
-//         <li>LinkedIn: <a href="https://www.linkedin.com/in/praveen-rajkumar-59163416b/">Praveen Rajkumar</a></li>
-//         <li>Address: 57/6 Bryant Nagar, First Street, Thoothukudi, India</li>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export defadivt Header;
-
-import React, { useState } from 'react';
-import './header.css';
-import Profile from '../Profile/Profile';
-import Skills from '../Skills/Skills';
-import Experience from '../Experience/Experience';
-import Education from '../Education/Education';
-import Credentials from '../Credentials/Credentials';
-import Awards from '../Awards/Awards';
+import React from "react";
+import "./header.css";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Header = () => {
-
-  const [activeComponent, setActiveComponent] = useState('profile');
-
-  const handleNavClick = (componentName:any) => {
-    setActiveComponent(componentName);
-  }
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-
-    <><header className="header">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <a className="navbar-brand" href="/">
-                Praveen Rajkumar
-              </a>
-            </div>
-            <div className="col-lg-8" style={{ marginTop: "-16px" }}>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <div className="navbar-nav">
-                <a className="nav-link btn btn-light" onClick={() => handleNavClick('header')} href="#header">
-  Home
-</a>
-
-<a className="nav-link btn btn-light" onClick={() => handleNavClick('skills')} href="#skills">
-  Skills
-</a>
-<a className="nav-link btn btn-light" onClick={() => handleNavClick('education')} href="#education">
-  Education
-</a>
-<a className="nav-link btn btn-light" onClick={() => handleNavClick('experience')} href="#experience">
-  Experience
-</a>
-
-<a className="nav-link btn btn-light" onClick={() => handleNavClick('credentials')} href="#credentials">
-  Credentials
-</a>
-<a className="nav-link btn btn-light" onClick={() => handleNavClick('awards')} href="#awards">
-  Awards
-</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="header" style={{ background: darkMode ? "black" : "" }}>
+      <div className="header-left">
+        <div className="header-name" style={{ color: darkMode ? "white" : "" }}>
+          Praveen Rajkumar
         </div>
-      </nav>
-    </header>
-      {/* Always display the Profile component */}
-      <Profile />
- {/* Render the components conditionally based on activeComponent */}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {/* <a href="https://drive.google.com/file/d/1cyDcz_pBaxrEde8BlNK4yKHz8O9BOYhS/view?usp=sharing"><button className="button header-resume-btn">Resume</button></a> */}
+          {/* <a href="https://drive.google.com/file/d/1ixaGMeR8MPKK9yDl3FeJnzbPjJRw6pQY/view" target="_blank" ><button className="button header-resume-btn">Resume</button></a> */}
+          <a
+            href="https://drive.google.com/file/d/1TovTBvrvB-O1td9xAbgrjg_Xg_3fy78W/view?usp=drive_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="button header-resume-btn">Resume</button>
+          </a>
+        </div>
+      </div>
 
-      {activeComponent === 'skills' && <Skills />}
-      {activeComponent === 'experience' && <Experience />}
-      {activeComponent === 'education' && <Education />}
-      {activeComponent === 'credentials' && <Credentials />}
-      {activeComponent === 'awards' && <Awards />}
-      </>
+      <div className="header-right">
+        <ul>
+          <li>
+            <a href="#home" style={{ color: darkMode ? "white" : "" }}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#proj" style={{ color: darkMode ? "white" : "" }}>
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#skills" style={{ color: darkMode ? "white" : "" }}>
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#contact" style={{ color: darkMode ? "white" : "" }}>
+              Contact
+            </a>
+          </li>
+        </ul>
+        <a href="#proj">
+          <button className="button header-portfolio-btn">Portfolio</button>
+        </a>
+      </div>
+    </div>
   );
 };
 
