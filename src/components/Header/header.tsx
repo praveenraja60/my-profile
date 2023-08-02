@@ -15,13 +15,13 @@ const Header = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           {/* <a href="https://drive.google.com/file/d/1cyDcz_pBaxrEde8BlNK4yKHz8O9BOYhS/view?usp=sharing"><button className="button header-resume-btn">Resume</button></a> */}
           {/* <a href="https://drive.google.com/file/d/1ixaGMeR8MPKK9yDl3FeJnzbPjJRw6pQY/view" target="_blank" ><button className="button header-resume-btn">Resume</button></a> */}
-          <a
+          {/* <a
             href="https://drive.google.com/file/d/1TovTBvrvB-O1td9xAbgrjg_Xg_3fy78W/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
-          >
-            <button className="button header-resume-btn">Resume</button>
-          </a>
+          > */}
+          <button className="button header-resume-btn">Resume</button>
+          {/* </a> */}
         </div>
       </div>
 
