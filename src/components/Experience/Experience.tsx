@@ -21,7 +21,7 @@ const experiences: ExperienceData[] = [
     date: "Jan 2023 – May 2023",
     companyName: "INTUITIVE STACK SOLUTIONS PVT LTD • Hyderabad",
     description: `Resolving Problems that impact design of current or developing products.
-    Create Controllers, modules and services as per customer requirements.
+    Create Controllers, Modules and Service as per customer requirements.
     Implemented new functionality for the frontend web-based applications.
     Meeting with the development team to define the scope and scale of software Projects.`,
     image: rmaImage,
