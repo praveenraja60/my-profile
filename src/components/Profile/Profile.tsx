@@ -38,7 +38,7 @@ const Profile = () => {
               />
             </span>
             <p>
-              I am a front-end developer with over 2.5 years of hands-on
+              I am a front-end developer with over 3 years of hands-on
               experience in designing, developing, and implementing applications
               and solutions using various technologies and programming
               languages. I am currently seeking a challenging role where I can

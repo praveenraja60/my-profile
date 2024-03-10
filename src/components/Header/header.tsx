@@ -2,10 +2,16 @@ import React from "react";
 import "./header.css";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+// import {resumePDF} from "../../assets/resume.pdf"; // Import the PDF file
 
 const Header = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  const handleDownloadResume = () => {
+    // window.open(resumePDF); // Open the PDF file in a new tab for download
+  };
+
   return (
     <div className="header" style={{ background: darkMode ? "black" : "" }}>
       <div className="header-left">
@@ -13,15 +19,12 @@ const Header = () => {
           Praveen Rajkumar
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          {/* <a href="https://drive.google.com/file/d/1cyDcz_pBaxrEde8BlNK4yKHz8O9BOYhS/view?usp=sharing"><button className="button header-resume-btn">Resume</button></a> */}
-          {/* <a href="https://drive.google.com/file/d/1ixaGMeR8MPKK9yDl3FeJnzbPjJRw6pQY/view" target="_blank" ><button className="button header-resume-btn">Resume</button></a> */}
-          {/* <a
-            href="https://drive.google.com/file/d/1TovTBvrvB-O1td9xAbgrjg_Xg_3fy78W/view?usp=drive_link"
-            target="_blank"
-            rel="noreferrer"
-          > */}
-          <button className="button header-resume-btn">Resume</button>
-          {/* </a> */}
+          <button
+            className="button header-resume-btn"
+            onClick={handleDownloadResume}
+          >
+            Resume
+          </button>
         </div>
       </div>
 

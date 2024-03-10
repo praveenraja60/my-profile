@@ -4,6 +4,7 @@ import rmaImage from "../../assets/skill-icons/RMa.jpg";
 import bambeeqImage from "../../assets/skill-icons/bambeeq.jpg";
 import srjinfognanaImage from "../../assets/skill-icons/infognana.jpg";
 import aaludraImage from "../../assets/skill-icons/aaludra-logo-btext.png";
+import kambaa from "../../assets/skill-icons/kambaa.jpg";
 
 interface ExperienceData {
   id: number;
@@ -17,6 +18,22 @@ interface ExperienceData {
 const experiences: ExperienceData[] = [
   {
     id: 1,
+    position: "Reactjs Developer",
+    date: "Aug 2023 – StillWorking",
+    companyName: "Kambaa Incorporation • Coimbatore",
+    description: `Working on Independent Project in React Native for ( Android & IOS )
+     Create Controllers, modules and services as per customer requirement.
+     Integrate the API provided by the backend team .Verify it using postman before
+    implementing it into the Project.
+     Meeting with the development team to define the scope and scale of software Projects.
+     Change the UI design as per the Client Request.
+     Projects Handled : React Native ( Grozerbeez ),
+     Reactjs ( EasyDaily & AnythingKovai)
+    `,
+    image: kambaa,
+  },
+  {
+    id: 2,
     position: "Web Application Developer",
     date: "Jan 2023 – May 2023",
     companyName: "INTUITIVE STACK SOLUTIONS PVT LTD • Hyderabad",
@@ -27,7 +44,7 @@ const experiences: ExperienceData[] = [
     image: rmaImage,
   },
   {
-    id: 2,
+    id: 3,
     position: "Associate Software Engineer",
     date: "Mar 2022 – Nov 2022",
     companyName: "BambeeQ Solutions Private Limited • Chennai",
@@ -40,7 +57,7 @@ const experiences: ExperienceData[] = [
     image: bambeeqImage,
   },
   {
-    id: 3,
+    id: 4,
     position: "Project Delegate",
     date: "May 2021 - Dec 2021",
     companyName: "SRJ Infognana Systems Private Limited • Coimbatore",
@@ -54,7 +71,7 @@ const experiences: ExperienceData[] = [
     image: srjinfognanaImage,
   },
   {
-    id: 4,
+    id: 5,
     position: "Junior Developer",
     date: "Sep 2020 - Apr 2021",
     companyName: "Aaludra Technologies • Coimbatore",

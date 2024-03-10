@@ -20,7 +20,7 @@ const Homepage = () => {
           <div style={{ color: darkMode ? "white" : "" }}>Hy! I Am</div>
           <div className="praveen">Praveen Rajkumar</div>
           <p>
-            <b>2.5 Years Experience</b>
+            <b>3 Years Experience</b>
           </p>
           <div style={{ color: darkMode ? "white" : "" }}>
             <b>
