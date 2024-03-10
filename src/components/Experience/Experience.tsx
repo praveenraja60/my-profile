@@ -4,7 +4,7 @@ import rmaImage from "../../assets/skill-icons/RMa.jpg";
 import bambeeqImage from "../../assets/skill-icons/bambeeq.jpg";
 import srjinfognanaImage from "../../assets/skill-icons/infognana.jpg";
 import aaludraImage from "../../assets/skill-icons/aaludra-logo-btext.png";
-import kambaa from "../../assets/skill-icons/kambaa.jpg";
+import kambaaImage from "../../assets/skill-icons/kambaa.jpg";
 
 interface ExperienceData {
   id: number;
@@ -19,28 +19,24 @@ const experiences: ExperienceData[] = [
   {
     id: 1,
     position: "Reactjs Developer",
-    date: "Aug 2023 – StillWorking",
+    date: "Aug 2023 – Present",
     companyName: "Kambaa Incorporation • Coimbatore",
-    description: `Working on Independent Project in React Native for ( Android & IOS )
-     Create Controllers, modules and services as per customer requirement.
-     Integrate the API provided by the backend team .Verify it using postman before
-    implementing it into the Project.
-     Meeting with the development team to define the scope and scale of software Projects.
-     Change the UI design as per the Client Request.
-     Projects Handled : React Native ( Grozerbeez ),
-     Reactjs ( EasyDaily & AnythingKovai)
-    `,
-    image: kambaa,
+    description: `Working on Independent Project in React Native for (Android & IOS). 
+      Create Controllers, modules, and services as per customer requirements.
+      Integrate the API provided by the backend team and verify it using Postman before implementing it into the Project.
+      Meeting with the development team to define the scope and scale of software projects.
+      Projects Handled: React Native (Grozerbeez), Reactjs (EasyDaily & AnythingKovai)`,
+    image: kambaaImage,
   },
   {
     id: 2,
     position: "Web Application Developer",
     date: "Jan 2023 – May 2023",
     companyName: "INTUITIVE STACK SOLUTIONS PVT LTD • Hyderabad",
-    description: `Resolving Problems that impact design of current or developing products.
-    Create Controllers, Modules and Service as per customer requirements.
-    Implemented new functionality for the frontend web-based applications.
-    Meeting with the development team to define the scope and scale of software Projects.`,
+    description: `Resolving Problems that impact the design of current or developing products.
+      Create Controllers, Modules, and Services as per customer requirements.
+      Implemented new functionality for the frontend web-based applications.
+      Meeting with the development team to define the scope and scale of software projects.`,
     image: rmaImage,
   },
   {
@@ -48,12 +44,12 @@ const experiences: ExperienceData[] = [
     position: "Associate Software Engineer",
     date: "Mar 2022 – Nov 2022",
     companyName: "BambeeQ Solutions Private Limited • Chennai",
-    description: `Provide an end-to-end service, and can be involved in projects that involve databases and building user-facing websites.
-    Resolving Problems that impact design of current or developing products.
-    Create components and modules as per customer requirements.
-    Implemented new functionality for the frontend web-based applications.
-    Meeting with the development team to define the scope and scale of software Projects.
-    Projects Handled: HMS (Hospital Management System), TMS (Task Management System), HRA`,
+    description: `Provide an end-to-end service and can be involved in projects that involve databases and building user-facing websites.
+      Resolving Problems that impact the design of current or developing products.
+      Create components and modules as per customer requirements.
+      Implemented new functionality for the frontend web-based applications.
+      Meeting with the development team to define the scope and scale of software projects.
+      Projects Handled: HMS (Hospital Management System), TMS (Task Management System), HRA`,
     image: bambeeqImage,
   },
   {
@@ -62,12 +58,12 @@ const experiences: ExperienceData[] = [
     date: "May 2021 - Dec 2021",
     companyName: "SRJ Infognana Systems Private Limited • Coimbatore",
     description: `Work closely with design, product management, and development teams to create elegant, usable, responsive, and interactive client webpage.
-    Collaborate with back-end developers and web designers to improve usability.
-    Create components/modules as per customer requirements.
-    Maintain, update, and improve existing company websites.
-    Implemented modern functionalities for the frontend web-based applications.
-    Support immensely on optimal flow for rapidly changing design and technology.
-    Projects Handled: Tab Service, Eassy Cart`,
+      Collaborate with back-end developers and web designers to improve usability.
+      Create components/modules as per customer requirements.
+      Maintain, update, and improve existing company websites.
+      Implemented modern functionalities for the frontend web-based applications.
+      Support immensely on optimal flow for rapidly changing design and technology.
+      Projects Handled: Tab Service, Eassy Cart`,
     image: srjinfognanaImage,
   },
   {
@@ -76,11 +72,11 @@ const experiences: ExperienceData[] = [
     date: "Sep 2020 - Apr 2021",
     companyName: "Aaludra Technologies • Coimbatore",
     description: `Played a key role in the development, improvement, and operation of web-based software.
-    Perform code review, bug fix, QA, and problem solve.
-    Check/verify API functionality using POSTMAN, SWAGGER.
-    Provide technical support to the client facing issues.
-    Form alignment should get done as per user needs.
-    Project Handled: SFC (Sakthi Fertilizers Corporations)`,
+      Perform code review, bug fix, QA, and problem solve.
+      Check/verify API functionality using POSTMAN, SWAGGER.
+      Provide technical support to the client facing issues.
+      Form alignment should get done as per user needs.
+      Project Handled: SFC (Sakthi Fertilizers Corporations)`,
     image: aaludraImage,
   },
 ];
@@ -110,7 +106,11 @@ const Experience: React.FC = () => {
             onClick={() => handleExperienceClick(experience)}
           >
             <img src={experience.image} alt={experience.companyName} />
-            <h3>{experience.companyName}</h3>
+            <div className="experience-details">
+              <h3>{experience.companyName}</h3>
+              <p>{experience.position}</p>
+              <p className="date">{experience.date}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -127,9 +127,7 @@ const Experience: React.FC = () => {
             />
             <h3>{selectedExperience.position}</h3>
             <p className="date">{selectedExperience.date}</p>
-            <p style={{ fontWeight: "bold" }} className="companyname">
-              {selectedExperience.companyName}
-            </p>
+            <p className="companyname">{selectedExperience.companyName}</p>
             <div className="description-scroll">
               <ul className="description-list">
                 {selectedExperience.description

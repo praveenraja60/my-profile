@@ -11,6 +11,7 @@ import angular from "../../assets/skill-icons/angular.jpg";
 import git from "../../assets/skill-icons/git.png";
 import post from "../../assets/skill-icons/postman.svg";
 import nest from "../../assets/skill-icons/nest.jpg";
+import native from "../../assets/skill-icons/reactnative.png";
 
 const Skills: React.FC = () => {
   const theme = useContext(themeContext);
@@ -141,6 +142,16 @@ const Skills: React.FC = () => {
         >
           <img src={nest} alt="nest" />
           <p style={{ color: darkMode ? "white" : "" }}>Nest</p>
+        </div>
+        <div
+          className="each-icon"
+          style={{
+            background: darkMode ? "black" : "",
+            border: darkMode ? "1px solid grey" : "",
+          }}
+        >
+          <img src={native} alt="nest" />
+          <p style={{ color: darkMode ? "white" : "" }}>React Native</p>
         </div>
       </div>
     </div>

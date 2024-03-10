@@ -1,79 +1,50 @@
-/* .profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-} */
-.profile-column {
-  width: fit-content;
-  height: fit-content;
-  margin: 0 auto; /* Optional: To center the profile photo horizontally */
+.profile-container {
+  padding: 50px 0;
 }
 
 .profile-photo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.details-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .name {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.designation,
-.location {
+.designation {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.bio {
   font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-
-/* Typeweiter */
-/* .Typewriter__wrapper {
-    display: inline-block;
-    overflow: hidden;
-    animation: typewriter-animation 4s steps(22) infinite;
-    white-space: nowrap;
-    border-right: .15em solid orange;
-  }
-  
-  @keyframes typewriter-animation {
-    0% {
-      width: 0;
-    }
-    50% {
-      border-color: transparent;
-    }
-    100% {
-      width: 100%;
-      border-color: orange;
-    }
-  }
-   */
-
-.typing {
-  font-family: sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-  text-align: center;
-  color: blue;
+.contact-info {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
   align-items: center;
-  min-height: 100vh;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact-text {
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -23,11 +23,19 @@
 
 .experience-card {
   cursor: pointer;
-  width: 200px;
+  width: 280px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
 }
 
 .experience-card img {
@@ -37,9 +45,19 @@
   border-radius: 8px 8px 0 0;
 }
 
-.experience-card h3 {
-  font-size: 18px;
-  margin: 10px;
+.experience-card .experience-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.experience-card .experience-details h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.experience-card .experience-details p {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 /* Modal styles */
@@ -88,6 +106,19 @@
 
 .modal ul li {
   margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.modal ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #007bff; /* Change color as needed */
 }
 
 .modal .close-btn {
