@@ -51,9 +51,9 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <a href="#proj">
+        {/* <a href="#proj">
           <button className="button header-portfolio-btn">Portfolio</button>
-        </a>
+        </a> */}
       </div>
     </div>
   );

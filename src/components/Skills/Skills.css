@@ -1,6 +1,7 @@
 .skills {
   background-color: yellow;
-  background-color: #f5f6fa;
+  /* background-color: #f5f6fa; */
+  background-color: slategray;
   width: 100%;
   min-height: 100vh;
   display: flex;

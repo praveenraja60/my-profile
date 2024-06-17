@@ -10,11 +10,7 @@ const Homepage = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <div
-      className="homepage"
-      id="home"
-      style={{ background: darkMode ? "rgb(23, 23, 23)" : "" }}
-    >
+    <div className="homepage" id="home">
       <div className="homepage-content">
         <div className="homepage-content-left">
           <div style={{ color: darkMode ? "white" : "" }}>Hy! I Am</div>
@@ -22,11 +18,11 @@ const Homepage = () => {
           <p>
             <b>3 Years Experience</b>
           </p>
-          <div style={{ color: darkMode ? "white" : "" }}>
+          <div className="typewriter-container">
             <b>
               <Typewriter
                 options={{
-                  strings: ["FRONTEND DEVELOPER", "React JS & Angular"],
+                  strings: ["FRONTEND DEVELOPER", "React JS Developer"],
                   autoStart: true,
                   loop: true,
                 }}
@@ -40,7 +36,7 @@ const Homepage = () => {
 
         <div className="homepage-content-right">
           <div className="background-circle">
-            <img className="mypic" src={myPro} alt="" />
+            <img className="mypic" src={myPro} alt="Praveen" />
           </div>
         </div>
       </div>
